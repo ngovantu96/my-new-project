@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- baứt sự kiện bằng -->
+    <select  id="myselect" >
+        <option value="xe may">xe may</option>
+        <option value="xe dap">xe dap</option>
+        <option value="oto">oto</option>
+        <option value="xe tai">xe tai</option>
+    </select>
+    
+    <p onclick="do_Something()"> click me</p>
+    <p id="demo">click</p>
+    <h2>click</h2>
+    <button onclick="window.print()">click me</button>
+    
+    <script>
+    
+        // function  do_Something(){
+        // var selectedValue=document.getElementById("myselect").innerHTML.value;
+        // alert(selectedValue);
+        // }
+        // var selectedElemen=document.getElementById("myselect");
+        // selectedElemen.addEventListener("change", changeFuction);
+        // function changeFuction(){
+        //     var selectvalue=document.getElementById("myselect").innerHTML.value;
+        //     alert(selectvalue);
+//////
+
+
+// //// demo đổi màu tex;
+    
+            // var demo=document.getElementById("demo");
+            // demo.addEventListener("mouseover", mouseover);
+            // demo.addEventListener("mouseout",mouseout);
+            // function mouseover(){
+            //     document.getElementById("demo").style.color="red";
+            // }
+            // function mouseout(){
+            //     document.getElementById("demo").style.color="black";
+            // }
+        
+    //    bắt sựu kiên onclick///
+          
+       // <p id="do_Something"> onclick</p>
+        function do_Something() {
+            alert("xin chào");
+            
+        }
+        var demo=document.getElementById("demo");
+        demo.addEventListener("click",clickFuntion);
+        function clickFuntion() {
+        alert("xin chào");
+            
+        }
+
+
+    </script>
+
+ 
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    
+  <h2>What Can JavaScript Do?</h2>
+  <p id="demo">JavaScript can change HTML content.</p>
+  <button type="button" onclick= 'document.getElementById("demo").innerHTML = "Hello JavaScript !"'>Click Me!</button> -->
+<br><br>
+  <!-- bài 1hiển thị sử dụng hàm alert -->
+  <button type="button" onclick="showMessage();"> click me !</button>
+  <script>
+      function showMessage() {
+          alert('xin chào !');
+          
+      }
+  </script>
+  <br><br>
+
+  <!--bài 2 hiển thị kết quả sử dụng thẻ html -->
+  
+  <div id="messageDiv"></div>
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+ function showMessage(){
+     document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+ }
+</script>
+<br><br>
+
+<!-- 3. hiển thị kq sử dụng hàm documen.write -->
+<button type="button" onclick="showmessage();">Click Me</button>
+<script>
+    function showmessage() {
+        document.write('xin chào');
+        
+    }
+    
+</script>
+ <br><br>
+ <!-- bai 4 sử dụng consolog -->
+ <button type="button" onclick="showmessage();"> click to me</button>
+ <script>
+     function showmessage(){
+         console.log('xin chào !');
+     }
+ </script>
+
+</body>
+</html>
