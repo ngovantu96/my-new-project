@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // xay dung lop ngay,thang, nam
+    let myDate = function (day, month, year) {
+      this.day = day;
+      this.month = month;
+      this.year = year;
+      this.setDay = function (day) {
+      this.day = day;
+    };
+    this.setMonth = function (month) {
+      this.month = month;
+    };
+    this.setYear = function (year) {
+      this.year = year;
+    };
+      this.getDay = function () {
+      return this.day;
+    };
+    this.getMonth = function () {
+      return this.month;
+    };
+    this.getYear = function () {
+      return this.year;
+    };
+    };
+    // xay dung phuong thuc tra ve ngay thang nam
+    
+    //xay dung phung thuc thiet dat lai gia tri cac thuoc tinh day month year
+    this.setDay = function (day) {
+      this.day = day;
+    };
+    this.setMonth = function (month) {
+      this.month = month;
+    };
+    this.setYear = function (year) {
+      this.year = year;
+    };
+    // su dung lop vua tao.tao doi tuong voi ngay 2/2/2020
+    let date = new myDate(2,2,2020);
+    // truy cap phuong thuc
+
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    // hien thi gia tri ngay thang nam
+    alert(day + " " + "/" + month + "/" + year);
+       date.setDay(10);
+       date.setMonth(10);
+       date.setYear(2019);
+    alert(date.day + "/" + date.month + "/" + date.year);
+  </script>
+</html>
