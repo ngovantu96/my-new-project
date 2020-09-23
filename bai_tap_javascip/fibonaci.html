@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let so = +prompt("nhap so de tisnh fibonaci");
+        let count=0;
+        let sum=0;
+        function fibonaci(so){
+            if(so==0)
+            return 0;
+            if(so==1)
+            return 1;
+            return fibonaci(so-1) + fibonaci(so-2);
+        }
+        
+        for(let i=0;i<=so;i++){
+        document.write(fibonaci(i)+",");
+      
+       }
+      
+       document.write("<br>");
+       document.write("số đầu tiên chia hết cho 5 :");
+       document.write("<br>");
+       for(let i=0;i<=so;i++){
+          if(fibonaci(i)%5==0){
+              count=i;
+              
+              document.write(count);
+              break;
+          }
+          //document.write(count);
+       }
+       document.write("<br>");
+
+       
+       document.write("<br>");
+        document.write(" Tổng của 20 số đàu tiên trong dãy fibonaci <br>");
+    //    for(let i=0;i<=so;i++){
+    //        if(i<fibonaci(so)){
+               
+    //            sum+=fibonaci(so);
+        
+    //        }
+           
+    //    }
+    for(let i=0;i<so;i++){
+        document.write(fibonaci(i)+",");
+        sum+=fibonaci(i);
+       }
+       document.write("<br>");
+       
+       document.write("Tổng =  "+sum );
+       
+
+
+
+    // //    bài 8 viết chương trình in ra các số từ 100;
+    //  for(let i=0; i<=100;i++){
+    //      document.write(i);
+    //     //  if(i%3==0){
+    //     //      document.write("fizz")
+    //     //  }
+    //     //  if(i%5==0){
+    //     //      document.write("buzz");
+    //     //  }
+    //     //  if(i%3==0 && i%5==0){
+    //     //      document.write("fizz buzz");
+    //     //  }
+    //  }
+    </script>
+    
+</body>
+</html>

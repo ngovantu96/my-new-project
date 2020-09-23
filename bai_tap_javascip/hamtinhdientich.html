@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let height=+prompt("nhập chiều cao của hcn");
+        let width=+prompt("nhập chiều dài của hcn");
+        function acreage() {
+            return height*width;
+        }
+        function perimetter() {
+            let perimetter=(height+width)/2;
+            return perimetter;
+        }
+        document.write("diện tích hcn là &nbsp"+acreage()+"<br>");
+        document.write("chu vi hcn là &nbsp"+perimetter());
+
+
+    </script>
+</body>
+</html>

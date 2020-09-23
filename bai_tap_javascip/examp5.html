@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let star=["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+        let constellation=["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+        let inport;
+        inport=prompt("mời bạn nhạp vào tên ngôi sao");
+        function  check(inport) {
+            let tatol=" ";
+            for(let i=0;i<=star.length-1;i++){
+                if(inport==star[i]){
+                    tatol="ngôi sao"+ star[i] +"ở chòm sao"+constellation[i];
+                    break;
+                }else{   
+                tatol="ngôi sao không tìm thấy";
+                }
+                }
+                return tatol;
+            }
+            document.write(check(inport));
+        
+    </script>
+    
+</body>
+</html>

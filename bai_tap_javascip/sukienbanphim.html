@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload=doReady()>
+    <img
+      id="nobita"
+      src="https://img2.thuthuatphanmem.vn/uploads/2018/12/08/anh-dep-nhat-ve-nobita_105845570.jpg"
+      alt=" "
+      style="position: absolute; left: 0; top: 0";
+      width="100px";
+      height="100px";
+    />
+    <!-- xây dựng hàm nhấn lên -->
+    <script>
+        let elment=document.getElementById('nobita');
+      function init() {
+        elment.style.position = "relative";
+        element.style.left = "0px";
+        element.style.top = "0px";
+      }
+      function upArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.syle.top = parseInt(element.style.top) - 10 + "px";
+      }
+      // xây dựng hàm nhấn xuống
+      function downArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) + 10 + "px";
+      }
+      //  xaay duwngj hamf qua phai
+      function leftArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 10 + "px";
+      }
+
+      // xaay duwng hamf qua phair
+      function rightArrowPressed() {
+        let elment = document.getElementById("nobita");
+        elment.style.left = parseInt(elment.style.left) + 10 + "px";
+      }
+
+      // xaay duwngj hamf nhaajn cacs ban phim
+      function moveSelection(evt) {
+        switch (evt.keyCode) {
+          case 37:
+            leftArrowPressed();
+            break;
+          case 39:
+            rightArrowPressed();
+            break;
+          case 38:
+            upArrowPressed();
+            break;
+          case 40:
+            downArrowPressed();
+            break;
+        }
+      }
+
+      function doReady() {
+        window.addEventListener("keydown", moveSelection);
+      }
+    </script>
+  </body>
+</html>

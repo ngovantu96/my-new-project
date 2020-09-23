@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Click Me" onclick="moveRight();" />
+    <form action="">
+        <img  id ="myImage" src="https://meta.vn/Data/image/2020/03/06/bong-da-tieu-chuan-fifa-inspected-uhv-2-05.jpg" width="300px" height ="300px" alt="bóng đây">
+        <p>Click button below to move the image to right</p>
+        <button>Click me</button>
+        <!-- <input type="button" value="Click Me" onclick="moveRight();" /> -->
+    </form>
+    <script>
+        let imgObj=document.getElementById('myImage');
+        
+        //khởi tjao init() để khởi tạo imgobj mà chúng đã đặt vijtri và các thuộc tính còn lại
+        function init(){
+ 
+            imgObj.style.position= 'relative';
+            imgObj.style.left='0px';
+        }
+        // tạo hàm moveright() để tăng khoảng cách tría lên 10px;
+        function moveRight(){
+            imgObj.style.left=parseInt(imgObj.style.left) + 10 + 'px';
+        }
+        // gọi hàm init() khi trình duyet được tải lần đâu
+        window.load=init();
+       
+    </script>
+    
+</body>
+</html>

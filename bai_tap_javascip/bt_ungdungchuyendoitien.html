@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    </style>
+</head>
+<body>
+    <form action="method">
+        <label class="">Amount</label>
+        <input type="text" name="soluong" id="amount">
+        <label class="">From Currency</label>
+        <select name="country1" id="c">
+            <option value="1">ViệtNam</option>
+            <option value="2">American</option>
+        </select>
+        <label class="">To Currency</label>
+        <select name="country2" id="d">
+            <option value="1">VND</option>
+            <option value="2">USD</option>
+        </select>
+        <button type="button" onclick="doitien()">Convert</button>
+       
+    </form>
+    <div id= "result"></div>
+    <script>
+        function doitien() {
+            tien = document.getElementById("amount").value;
+            giatri1 = document.getElementById("c").value;
+            giatri2 = document.getElementById("d").value;
+            if (giatri1 == 1&& giatri2==2){
+                document.getElementById("result").innerHTML = "Result :"+ tien/23000+"$";
+                }else if (giatri1==2 && giatri2==1) {
+                    document.getElementById("result").innerHTML = "Result:" + tien*23000+"VND";
+                }else if (giatri1==1 && giatri2==1) {
+                    document.getElementById("result").innerHTML = "Result:" +tien +"VND";
+                }else if (giatri1==2 && giatri2==2) {
+                    document.getElementById("result").innerHTML = "Result:" +tien +"USD";
+                }
+            }
+
+        
+     
+       
+        
+     </script>
+     
+
+        
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+         let number1=+prompt("nhập số thứ nhất");
+         let number2=+prompt("nhập số thứ hai");
+         function addNumber(number1, number2) {
+             if(number1<number2){
+                 alert("sô nhỏ nhất là :"+number1);
+             }
+
+         }
+         function sum(number1,number2) {
+             return number1+number2;
+         }
+         addNumber(number1,number2);
+         document.write("Tổng của hai số <br> "+ sum(number1,number2));
+      
+    </script>
+  </body>
+</html>

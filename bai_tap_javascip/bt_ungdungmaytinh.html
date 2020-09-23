@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ứng dụng máy tính</title>
+    <style>
+        .bt{
+            width: 100px;
+            height: 100px;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>COCULATOR</h1>
+    <form action="">
+        <!-- <input type="button" id="bt" value="(">
+        <input type="button" id="bt" value=")">
+        <input type="button" id="bt" value="%">
+        <input type="button" id="bt" value="AC">
+        <br>
+        <input type="button" id="bt" value="7">
+        <input type="button" id="bt" value="8">
+        <input type="button" id="bt" value="9">
+        <input type="button" id="bt" value="%">
+        <br>
+        <input type="button" id="bt" value="4">
+        <input type="button" id="bt" value="5">
+        <input type="button" id="bt" value="6">
+        <input type="button" id="bt" value="X">
+        <br>
+        <input type="button" id="bt" value="1">
+        <input type="button" id="bt" value="2">
+        <input type="button" id="bt" value="3">
+        <input type="button" id="bt" value="-">
+        <br>
+        <input type="button" id="bt" value="0">
+        <input type="button" id="bt" value=".">
+        <input type="button" id="bt" value="=">
+        <input type="button" id="bt" value="+"> -->
+        <br><br>
+
+        <input type="text" name="" value="" id="sothunhat"><br><br>
+        <input type="text" name="" value="" id="sothuhai"><br>    <br>
+        <button type="button" value="" id="cong" onclick="phepcong()">Addition(+)</button>
+        <button type="button" value="" id="tru" onclick="pheptru()">Abtraction(-)</button><br><br>
+        <button type="button" value="" id="nhan" onclick="phepnhan()">Mutidlication(X)</button>
+        <button type="button" value="" id="chia" onclick="phepchia()">Division(/)</button><br><br>
+        <button type="button" value="" id="" >Kết quả</button>
+        <input type="text " id="ketqua">
+
+    </form>
+    <script>
+        function phepcong(){
+            a= parseFloat( document.getElementById("sothunhat").value );
+            b= parseFloat( document.getElementById("sothuhai").value);
+            tong=a+b;
+            document.getElementById("ketqua").value=tong;
+        }
+        function pheptru(){
+            a=parseFloat(document.getElementById("sothunhat").value);
+            b=parseFloat(document.getElementById("sothuhai").value);
+            hieu=a-b;
+            document.getElementById("ketqua").value=hieu;
+        }
+        function phepnhan(){
+            a=parseFloat(document.getElementById("sothunhat").value);
+            b=parseFloat(document.getElementById("sothuhai").value);
+            tich=a * b;
+            document.getElementById("ketqua").value=tich;
+
+        }
+        function phepchia(){
+            a=parseFloat(document.getElementById("sothunhat").value);
+            b=parseFloat(document.getElementById("sothuhai").value);
+            thuong=a/b;
+            document.getElementById("ketqua").value=thuong;
+        }
+
+
+        function ketqua(){
+            phepcong();
+            pheptru();
+            phepchia();
+            phepnhan()
+        }
+
+    </script>
+    
+</body>
+</html>

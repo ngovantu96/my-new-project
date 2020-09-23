@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        
+        div{
+            border-width: 3px;
+            border-style: solid;
+            border-color:black;
+            width: 400px;
+            height: 300px; 
+        }
+      
+    </style>
+</head>
+<body>
+    <div>
+    <form action="" >
+        <input type="text" id="ketqua"><br> <br>
+        <input id="bt" type="button" value="1" onclick="ketqua.value+=this.value">
+        <input id="bt" type="button" value="2" onclick="ketqua.value+=this.value">
+        <input id="bt" type="button" value="3" onclick="ketqua.value+=this.value">
+        <input id="bt" type="button" value="+" onclick="ketqua.value+=this.value">
+        <input id="bt" type="button" value="xoa" onclick="ketqua.value=ketqua.value.substr(0,ketqua.value.length-1)">
+        <br><br>
+        <input id="bt" type="button" value="4" onclick="ketqua.value+=this.value">
+        <input id="bt" type="button" value="5" onclick="ketqua.value+=this.value">
+        <input id="bt" type="button" value="6" onclick="ketqua.value+=this.value">
+        <input id="bt" type="button" value="-" onclick="ketqua.value+=this.value">
+        <br><br>
+        <input id="bt" type="button" value="7" onclick="ketqua.value+=this.value">
+        <input id="bt" type="button" value="8" onclick="ketqua.value+=this.value">
+        <input id="bt" type="button" value="9" onclick="ketqua.value+=this.value">
+        <input id="bt" type="button" value="*" onclick="ketqua.value+=this.value">
+        <br><br>
+        <input id="bt" type="button" value="C" onclick="ketqua.value=''">
+        <input id="bt" type="button" value="0" onclick="ketqua.value+=this.value">
+        <input id="bt" type="button" value="=" onclick="ketqua.value=eval(ketqua.value)" >
+        <input id="bt" type="button" value="/" onclick="ketqua.value+=this.value">
+    </form>
+    </div>
+    <!-- <script>
+        function nhap(){
+            so= parseFloat( document.getElementById("so").value );
+            pheptinh= parseFloat( document.getElementById("pheptinh").value);
+            //so2= parseFloat( document.getElementById("so1").value );
+            if(pheptinh.value= "+"){
+                ketqua()=so.value + so.value;
+            }
+        }
+        function ketqua(){
+            nhap();
+
+        }
+
+    </script> -->
+    
+</body>
+</html>

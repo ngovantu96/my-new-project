@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        border: solid black;
+        height: 150px;
+        width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        id="anh1"
+        src="img/meo1.jpg"
+        onclick="click1()"
+      />
+
+      <img
+        id="anh2"
+        src="img/meo2.jpg"
+        onclick="click2()"
+      />
+
+      <img
+        id="anh3"
+        src="img/meo3.jpg"
+        onclick="click3()"
+      />
+
+      <img
+        id="anh4"
+        src="img/meo4.jpg"
+        onclick="click4()"
+      />
+
+      <img
+        id="anh5"
+        src="img/meo5.jpg"
+        onclick="click5()"
+      />
+    </div>
+  </body>
+
+  <script>
+    var mang1 = ["img/meo1.jpg", "img/gau1.jpg", "img/khi1.jpg"];
+    var mang2 = ["img/meo2.jpg", "img/gau2.jpg", "img/khi2.jpg"];
+    var mang3 = ["img/meo3.jpg", "img/gau3.jpg", "img/khi3.jpg"];
+    var mang4 = ["img/meo4.jpg", "img/gau4.jpg", "img/khi4.jpg"];
+    var mang5 = ["img/meo5.jpg", "img/gau5.jpg", "img/khi5.jpg"];
+    let iAnh1 = 0;
+    function click1() {
+
+      if (iAnh1 == 3) {
+        iAnh1 = 0;
+      }
+      document.getElementById("anh1").src = mang1[iAnh1];
+      iAnh1++;
+      check();
+      
+    }
+    let iAnh2 = 0;
+    function click2() {
+      if (iAnh2 == 3) {
+        iAnh2 = 0;
+      }
+      document.getElementById("anh2").src = mang2[iAnh2];
+      iAnh2++;
+      check();
+    }
+    let iAnh3 = 0;
+    function click3() {
+      if (iAnh3 == 3) {
+        iAnh3 = 0;
+      }
+      document.getElementById("anh3").src = mang3[iAnh3];
+      iAnh3++;
+      check();
+    }
+    let iAnh4 = 0;
+    function click4() {
+      if (iAnh4 == 3) {
+        iAnh4 = 0;
+      }
+      document.getElementById("anh4").src = mang4[iAnh4];
+      iAnh4++;
+      check();
+      
+    }
+    let iAnh5 = 0;
+    function click5() {
+      if (iAnh5 == 3) {
+        iAnh5 = 0;
+      }
+      document.getElementById("anh5").src = mang5[iAnh5];
+      iAnh5++;
+      check();
+    }
+    function check() {
+      if (
+        iAnh1 == iAnh2 &&
+        iAnh2 == iAnh3 &&
+        iAnh3 == iAnh4 &&
+        iAnh4 == iAnh5
+      ) {
+       for(let i=1;i<=5;i++){
+       document.getElementById("anh"+i).style.border='solid red';
+       }
+      }else{
+        document.getElementById("anh"+1).style.border='solid black';
+      }
+    }
+   
+    
+  </script>
+</html>

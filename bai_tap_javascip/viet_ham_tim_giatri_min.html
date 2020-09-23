@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number1=+prompt("nhập số thứ nhất");
+        let number2=+prompt("nhập số thứ hai");
+        let number3=+prompt("nhập số thứ ba");
+        
+      
+        function numberMax(a,b,c) {
+            let max = a;
+            (a>b)?(a>c?max =a : max = c):(b>c?max = b:max = c);
+            return max;
+        }
+        function numberMin(a,b,c) {
+            let min =a;
+            (a<b)?(b<c?min=a : min=c):(b<c?min = b:min = c );
+            return min;
+        }
+        
+        document.write("số lớn nhất là :" + numberMax(number1,number2,number3));
+        document.write("<br> số nhỏ nhất  là :" + numberMin(number1,number2,number3));
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+            let a = [1, 5, 3, 10, 15, 30, 17, 44, 92, 56];
+            let n=a.length;
+            dem=0;
+            function giaTriMax() {
+              for (let i = 0; i < a.length - 1; i++) {
+                  if(a[i]>a[i+1]){
+                let tmp = a[i];
+                a[i] = a[i + 1];
+                a[i + 1] = tmp;
+                max = tmp;
+              }
+              }
+              return max;
+
+            }
+            document.write(giaTriMax()+"<br>");
+
+            function hienthi(){
+                for(let i=0;i<a.length;i++){
+                     if(a[i]>10){
+                     dem=dem+1;
+                     document.write(a[i]+",");
+                }
+                }
+                return dem;
+            }
+            document.write(hienthi()+"<br>");
+
+          //    function lietke(){
+          //        for(let i=0;i<a.length;i++){
+          //            if(a[i]>10){
+          //                document.write(a[i]+",");
+          //            }
+          //        }
+          //    }
+          //    document.write(lietke()+",");
+          // function daonguoc(a){
+          //     for(let i=0;i<n;i++){
+          //             let tam=a[i];
+          //             a[i]=a[n-1];
+          //             a[n-1]=tam;
+          //         }
+          //     }
+    
+      
+         for(let i=n-1;i>=0;i--)
+          {
+              document.write(a[i]+",");
+
+          }
+               
+      
+
+    </script>
+  </body>
+</html>

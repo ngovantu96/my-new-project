@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm trung bình</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Điểm Toán</label>
+        <input type="text" id="toan"  value="">
+        <label for="">Điểm lý</label>
+        <input type="text" id="ly" value="">
+        
+        <label for="">Điểm Hóa</label>
+        <input type="text" id="hoa" value="">
+        
+        <button type="button" onclick="diemTB()">ĐiểmTB</button>
+        
+    </form>
+    <div id="result"></div>
+    <script>
+        // bỏ parsen để xuất ra kiểu số. nếu không thì bị chuỗi kí tự
+        function diemTB(){
+            diemtoan=parseFloat( document.getElementById("toan").value);
+            diemly=parseFloat (document.getElementById("ly").value);
+            diemhoa= parseFloat (document.getElementById("hoa").value);
+           diem=(diemtoan+diemly+diemhoa)/3;
+           document.getElementById("result").innerHTML= "Điểm TB =" + diem;
+
+        }
+
+    </script>
+
+
+
+
+    <!-- <script>
+        let vatly = prompt("Nhập điểm vật lý:");
+        let hoahoc = prompt("Nhập điểm hóa học :");
+        let sinhhoc = prompt("Nhập điểm sinh học:");
+        let vl = parseInt(vatly);
+        let hh = parseInt(hoahoc);
+        let sh = parseInt(sinhhoc);
+        let sum = vl + hh + sh;
+        let diemtb = (vl+hh+sh)/3;
+        document.write("Tổng điểm là :" + sum);
+        document.write('<br>');
+        document.write("Điểm trung bình là :" + diemtb);
+    </script>     -->
+</body>
+</html>

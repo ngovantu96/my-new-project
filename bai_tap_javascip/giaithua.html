@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let so = +prompt("nhap số");
+        function giaithua(so){
+            if(so==1)
+            return 1;
+            return so*giaithua(so-1);
+        }
+        document.write(giaithua(so));
+    </script>
+    
+</body>
+</html>

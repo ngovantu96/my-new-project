@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[1,4,6,3,7,8,9,3,10,15,19,5,23,27];
+        let n=arr.length;
+        let count =0;
+        let sum =0;
+       // document.write(arr);
+      
+       function kiemtraSNT(a){
+           if(a<2){
+               return false;
+           }
+           for(let i=2;i<=Math.sqrt(a);i++){
+               if(a%i==0){
+                   return false;
+               }
+           }
+           return true;
+       }
+       function dem(){
+           for(let i=0;i<=n;i++){
+               if(kiemtraSNT(arr[i])){
+                   count++;
+               }
+           }
+           return count;
+       }
+       function xuatSNT(){
+           for(let i=0;i<n;i++){
+               if(kiemtraSNT(arr[i])){
+                   document.write(arr[i]+",");
+               }
+           }
+       }
+       function tong(){
+           for(let i=0;i<n;i++){
+               if(kiemtraSNT(arr[i])){
+                   sum=sum+arr[i];
+
+               }
+           }
+           return sum;
+       }
+       document.write("độ dài số nguyên tố là " + dem()+"<br>    ");
+       document.write(  xuatSNT()+" &nbsp số nguyên tố là <br>");
+       document.write("tổng số nguyên tố là &nbsp"+ tong());
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let a = [1, 5, 3, 15, 10, 30, 17, 44, 92, 56];
+         let n=a.length;
+        
+         document.write(a);
+         let tg;   
+          for(let i = 0; i < n - 1; i++){
+          for(let j = i + 1; j < n; j++){
+            if(a[i] < a[j]){
+                // Hoan vi 2 so a[i] va a[j]
+                tg = a[i];
+                a[i] = a[j];
+                a[j] = tg;        
+            }
+        }
+    }
+    document.write("Mang giảm dần là: "+"<br>");
+   for(let i = 0; i < n; i++){
+       document.write(a[i]+",");
+    }
+
+
+    document.write("<br>");
+    for(let i = 0; i < n - 1; i++){
+          for(let j = i + 1; j < n; j++){
+            if(a[i] > a[j]){
+                // Hoan vi 2 so a[i] va a[j]
+                tg = a[i];
+                a[i] = a[j];
+                a[j] = tg;        
+            }
+        }
+    }
+    document.write("Mang tăng dần là: "+"<br>");
+   for(let i = 0; i < n; i++){
+       document.write(a[i]+",");
+    }
+    </script>
+    
+</body>
+</html>

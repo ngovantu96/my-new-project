@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let cc = parseFloat(prompt("nhap chieu cao cua ban : "));
+      let cn = parseFloat(prompt("nhap can nang cua ban"));
+      let BMI = cn / cc ** 4;
+      if (BMI > 25) {
+        document.write("ban qua map" + " " + BMI);
+      } else if (BMI > 18 && BMI < 25) {
+        document.write("chuc mung ban !!! ban binh thuong" + " " + BMI);
+      } else if (BMI < 18) {
+        document.write("bajn oosm quas" + " " + BMI);
+      }
+    </script>
+  </body>
+</html>

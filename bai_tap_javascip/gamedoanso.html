@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <button id="click"onclick="click()">Chơi</button>
+     <script>
+    
+         let so=+prompt("nhập số giới hạn");
+         let sum=0;
+         let dem=0;
+         
+         for(let i=0;i<=so;i++){
+             if(i%7==0){
+                 document.write(i+",");
+                 dem=dem+1;
+                 sum=sum+i;
+             }
+             if(dem==30){
+                 break;
+             }
+            // document.write("tổng" + "=" + sum);
+         }
+         document.write("<br>"+  "tổng" + "=" + sum);
+     </script>
+    
+</body>
+</html>

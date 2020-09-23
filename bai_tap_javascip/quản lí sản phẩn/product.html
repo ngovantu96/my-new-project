@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            text-decoration: none;
+            color: white;
+            background-color: green;
+            padding: 7px 15px;
+            border-radius: 3px;
+        }
+        .search{
+            width: 600px;
+            background-color: red;
+            padding: 20px 10px;
+            border-radius: 5px;
+        }
+        .search input{
+            width: 500px;
+            padding: 7px 3px;
+        }
+        .product{
+            width: 600px;
+        }
+        .product table ,tr,th{
+            padding: 10px;
+            border-collapse:collapse;
+        }
+        .product table tbody tr:nth-child(even){
+            background-color: red;
+        }
+        .product table thead{
+            color: white;
+            background-color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <h2>Add new product</h2>
+    <div>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="productName">
+            </td>
+            <td>
+                <a class="btn" href="#" onclick="create()">Add</a>
+            </td>
+        </tr>
+    </table>
+    </div>
+    </div>
+    <div class="product">
+        <h2>Display All Product</h2>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>&nbsp</th>
+            </tr>
+        </thead>
+        <tbody id="ProductList"></tbody>
+    </table>
+</div>
+    
+</body>
+<script src="product.js"></script>
+</html>

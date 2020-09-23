@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let t = parseInt(prompt("nhập vào số tiền mà bạn muốn gửi"));
+        let r = +prompt("nhập vào số lãi mà bạn gửi tiền");
+        let n = +prompt("nhập vào kỳ hạn mà bạn muốn gửi tiền");
+        let l= Math.pow((1+r/100),5)*t;
+        document.write("số tiền của bạn là " + l);
+    </script>
+    
+</body>
+</html>

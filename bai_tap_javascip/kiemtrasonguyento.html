@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let so = +prompt("nhập độ dài số nguyên của bạn");
+        let count=0;
+        document.write(" số nguyên tố");
+        document.write(" <br>");
+        
+      // for(let so=1;so<100;++so){
+          
+          
+        //    for(let i=2;i<=so;i++){
+        //        if(so%i==0){
+        //            count++;
+        //        }
+        //        }
+        //        if(count==0 && so>1){
+        //          document.write(so+",");
+        //        }
+      // }
+      function kiemtra(){
+       for (let i = 2; i <= Math.sqrt(so); i++) {
+           if (so % i == 0) {
+               return false;
+           }
+       }
+       return true;
+      }
+      if(kiemtra(so)){
+          document.write(so) +" : la so nguyen tố ";
+      }
+
+
+      
+           
+
+
+       
+            
+       
+        
+
+    </script>
+    
+</body>
+</html>

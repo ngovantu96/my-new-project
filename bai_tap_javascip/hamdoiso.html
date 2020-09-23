@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number = prompt("nhập vào một số");
+      // let l = number.length;
+      // function daoso(number) {
+      //   if (number < 10) {
+      //     return false;
+      //   }
+      //   while (number[l - 1] == "0") --l;
+
+      //   for (let i = l - 1; i >= 0; --i) {
+      //     document.write(number[i]);
+      //   }
+      // }
+
+      let l = number.length;
+      function daoso(number) {
+      
+        while (number[l] == "0")
+        { --l;}
+
+        for (let i = l-1; i >= 0; --i) {
+          document.write(number[i]);
+        }
+      }
+    daoso(number);
+
+
+// function daoso(number) {
+    
+//     let res=0;
+//     let tamp = 0;
+//     while(number>0){
+//         tamp=number%10;
+//         res = res*10 + tamp;
+//         number = Math.floor(number/10);
+//     }
+//      return res;
+// }
+//    document.write(daoso(number));      
+    </script>
+  </body>
+</html>

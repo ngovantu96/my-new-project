@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+      
+        let eng=["hello","you","goodbye","goodmoring","thankyou"];
+        let vn=["xin chào","bạn","tạm biệt","chào buổi sáng","cảm ơn"];
+        let inport=prompt("mời bạn nhập từ cần tìm");
+        function check(inport){
+               for(let i=0;i<eng.length;i++){
+                   if(inport==eng[i]){
+                       document.write(vn[i]);
+                       
+                   }
+               }
+                     
+                   
+               }
+        
+        check(inport);
+       
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+       
+     
+    </style>
+</head>
+<body>
+    <h1>DO YOU LOVE ME ?</h1>
+    <form action="">
+     <input  type="button" value=" YES " onclick="yesClick()" >
+     <input type="button" id="btnNo" value="  NO  " onmouseover="hover()" style="position: relative;" >
+    </form>
+    <script>
+        function yesClick(){
+            alert("yes,you are right ");
+        }
+        // tạo hàm hover() gán giá trị cho random() để in ra chiều ca chiều rộng ở màn hình
+        function hover(){
+            x = Math.random()*window.innerWidth;
+            y = Math.random()*window.innerHeight;
+            document.getElementById("btnNo").style.left = x +"px";
+            document.getElementById("btnNo").style.top = y +"px";
+        }
+      
+    </script>
+    <var></var>
+    
+</body>
+</html>
