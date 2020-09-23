@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // khai báo năng lượng
+        let Battery = function(){
+            this.setEnergy = function(energy){
+                this.energy = energy;
+            };
+            this.getEnergy = function(){
+                return this.energy;
+            };
+            this.decreaseEnergy = function(){
+                if(this.energy>0){
+                    this.energy--;
+                }
+            };
+        };
+        // khai báo lớp flashLamp có ăc quy và năng lượng
+        let FlashLamp = function(){
+            this.setBattery = function(battery){
+                this.battery = battery;
+            };
+            this.getBatteryInfo = function(){
+                return this.battery.getEnergy();
+            };
+            this.light = function(){
+                if(this.status){
+                    alert("lighting");
+                }else{
+                    alert("not lighting");
+                }
+            };
+            this.turnOn = function(){
+                this.status = true;
+            };
+            this.turnOff = function(){
+                this.status = false;
+            };
+        };
+        // thử nghiệm
+        let battery = new Battery();
+        battery.setEnergy(10);
+        let flashLamp = new FlashLamp();
+        flashLamp.setBattery(battery);
+        document.write("battery info"+flashLamp.getBatteryInfo);
+        flashLamp.light();
+
+        document.write("tunr on <br>");
+        flashLamp.turnOn();
+        flashLamp.light();
+        document.write("Battery info : "+flashLamp.getBatteryInfo);
+
+        document.write("turn of <br>");
+        flashLamp.turnOff();
+        flashLamp.light();
+        //document.write("battery info :"+flashLamp.getBatteryInfo);
+
+
+    </script>
+    
+</body>
+</html>

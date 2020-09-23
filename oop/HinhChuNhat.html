@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="200px" height="100px" style="border:1px solid #f222">
+        your browser doea not suppot the html5 canvas tag
+        </canvas>
+    <script>
+        let Rectangle = function(x, y, width, height){
+            this.width = width;
+            this.height = height;
+            this.x = x;
+            this.y=y;
+            this.getS = function(){
+            return height*width;
+            };
+            this.getC = function(){
+            return (height+width)/2;
+            };
+            this.canvas = function(){
+                let ctx = document.getElementById("mycanvas").getContext("2d");
+                ctx.beginPath();
+                ctx.fillStyle="red";
+                ctx.rect(this.x,this.y,this.width, this.height);
+                ctx.fill();
+            };
+        };
+    
+        let rectangle = new Rectangle(20,40,40,80);
+            let s = rectangle.getS();
+            let C = rectangle.getC();
+         let canvas = rectangle.canvas();
+         alert(s);
+         alert(C);
+
+
+      
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Apple(name) {
+        this.name = name;
+        this.weight = 10;
+        this.isEmpty = function(apple){
+          if(this.weight==0){
+            return true;
+          }
+          return false;
+        };
+        this.getWeight = function () {
+          return this.weight;
+        };
+      };
+
+      function Human(name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.speack = function (str) {
+          console.log("bạn đang nói" + str);
+        }
+        // this.setApple = function(apple){
+        //   this.apple = apple;
+        // }
+        this.eat = function (apple) {
+          if (!apple.isEmpty()) {
+            this.weight+=5;
+            apple.weight-=5;
+          }
+        };
+        this.checkApple = function (apple) {
+          if(!apple.isEmpty()){
+            return "quả táo còn";
+          }else{
+            return "quả táo không còn";
+          }
+        };
+      };
+      let tao = new Apple("táo mỹ");
+      let ten = new Human("sieunhan", "nam", 60);
+      let ten1= new Human("batman","nu", 50);
+      //ten.setApple(tao);
+    </script>
+  </body>
+</html>

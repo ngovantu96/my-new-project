@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Mobile = function(){
+            this.pin = 0;
+            this.message =[];
+            this.savetexting = [];
+            this.savemessage = [];
+            this.sendmessage = [];
+            // trnagj thái ddiejn thoại tắt
+            this.statusMobile =false;
+            // chuwasc năng bật tắt
+            this.on_offMobie = function(){
+                if(this.statusMobile==true){
+                    this.statusMobile=false;
+                    return "điện thoại của bạn đã tắt";
+                }
+                else{
+                    this.statusMobile=true;
+                     return "điện thoại của bạn đã bât";
+                }     
+            };
+            this.checkMobile = function(){
+                if(this.statusMobile){
+                    return "điện thoại đang bật";
+                }
+                return "điên thoại đang tắt";
+            };
+            this.chargeMobile = function(){
+               this.pin=100;
+                return this.pin;  
+
+            };
+            // soạn tin nhắn
+            this.textingMessage = function(message){
+                this.savetexting.push(message);
+                this.pin--;
+                return this.savetexting;
+            };
+            // nhận tin nhắn
+            this.receiveMessage = function(message){
+                let arr = this.savemessage.push(message);
+                this.pin--;
+                return this.savemessage;
+            };
+            // gửi tin nhắn
+            this.sendMessage = function(mobile){
+               let arr = [this.message]
+               mobile.receiveMessage.push(arr);
+               this.savemessage.push(arr);
+               this.pin--;
+                return this.sendmessage;
+            };
+            // xem tin nhắn đã gửi
+            this.checkSendMessage = function(){
+                this.pin--;
+                return this.sendmessage;
+            }
+            // xem tin đã nhận
+            this.checkRiceiveMessage =function(){
+                this.pin--;
+                return this.savemessage;
+            }
+        }
+        let Nokia = new Mobile(50);
+        let Iphone = new Mobile(90);
+
+            
+            
+        
+
+      
+        
+      
+    </script>
+</body>
+</html>

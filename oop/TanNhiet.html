@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let Temperatura = function (c) {
+        this.c = c;
+        this.getC = function () {
+          return c;
+        };
+        this.getF = function () {
+          return c * 1, 8 + 32;
+        };
+        this.getK = function () {
+          return c + 137, 15;
+        };
+      };
+
+      let temperatura = new Temperatura(25);
+      let f = temperatura.getF();
+      let k = temperatura.getK();
+      alert(f);
+      alert(k);
+    </script>
+  </body>
+</html>
