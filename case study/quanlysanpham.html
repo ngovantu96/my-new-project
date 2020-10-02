@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="renderListProduct()">
+    <div id="form_Product">
+      
+        <h3>Quản Lý Sản Phẩm</h3>
+    <div class="form-input">
+        <label for="ma">Mã Sản Phẩm</label>
+        <input type="text" id="masp" value="" placeholder="nhập mã sản phẩm"  >
+        <span class="" id="ma-error"></span><br>
+       
+    </div>
+    <div class="form-input"> 
+        <label >Tên Sản Phẩm</label>
+        <input type="text" id="tensp" value="" placeholder="nhập tên sản phẩm" >
+        <span class="" id="ten-error"></span><br>
+        
+    </div>
+    
+    <div class="form-input">
+        <label >Giá</label>
+        <input min="1" type="number" id="gia" value="" placeholder="nhập giá sản phẩm" >
+        <span class="" id="gia-error"></span><br>
+    </div>
+    <div class="form-input">
+        <label >Nhà Sản Xuất</label>
+        <input  type="text" id="nhasanxuat" placeholder="nhà sản xuất" >
+        <span class="" id="nhasx-error"></span><br>
+    </div>
+    <div class="form-input">
+        <label >Nơi Sản Xuất</label>
+        <input type="text" id="noisanxuat" value="" placeholder="nhập nơi sản xuất" >
+        <span class="" id="noisx-error"></span><br>
+    </div>
+    <div class="form-input">
+        <label >Năm Sản Xuất</label>
+        <input min="1" type="number" id="namsanxuat" value="" placeholder="nhập năm sản xuất">
+        <span id="namsx-error"></span><br>
+    </div>
+       
+    <div id="btn">
+        <button id="create-product" onclick="createProduct()">Thêm</button>
+        <input id="search" type="text" name="search" placeholder="Tìm theo mã sản phẩm">
+        <button id="search-product" onclick="Search()">Tìm Kiếm</button>
+       
+    </div>
+    </div>
+</div>
+    <hr>
+    <div id="viewList">
+    <h2>Danh Sách Sản Phẩm</h2>
+    <table id="listProduct"></table>
+</div>
+ 
+</body>
+
+<script src="quanlysanpham.js"></script>
+
+</html>
