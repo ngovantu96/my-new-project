@@ -161,22 +161,22 @@ function deleteProduct(id){
    }
 
  }
- function Search(id){
-    let products =localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
-    let masp = document.getElementById("search").value;
-    let product =products[id];
-    if(masp == product){
-        console.log(masp);
-   // document.getElementById("masp").value =product.masanpham;
-    }
-    // document.getElementById("tensp").value =product.tensanpham;
-    // document.getElementById("gia").value = product.gia;
-    // document.getElementById("nhasanxuat").value = product.nhasanxuat;
-    // document.getElementById("noisanxuat").value = product.noisanxuat;
-    // document.getElementById("namsanxuat").value = product.namsanxuat;
-    // }
+//  function Search(id){
+//     let products =localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
+//     let masp = document.getElementById("search").value;
+//     let product =products[id];
+//     if(masp == product){
+//         console.log(masp);
+//    // document.getElementById("masp").value =product.masanpham;
+//     }
+//     // document.getElementById("tensp").value =product.tensanpham;
+//     // document.getElementById("gia").value = product.gia;
+//     // document.getElementById("nhasanxuat").value = product.nhasanxuat;
+//     // document.getElementById("noisanxuat").value = product.noisanxuat;
+//     // document.getElementById("namsanxuat").value = product.namsanxuat;
+//     // }
    
-    // localStorage.setItem('products', JSON.stringify(products));
-    // renderListProduct();
- }
+//     // localStorage.setItem('products', JSON.stringify(products));
+//     // renderListProduct();
+//  }
  
