@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start">Start</button>
+    <div id="result"></div>
+    <script>
+        class Pokemon {
+            constructor(name,heal, attack, defend){
+                this.name = name;
+                this.heal = heal;
+                this.attack = attack;
+                this.defend = defend;
+            }
+            getAttack(){
+                return Math.floor(Math.random()*this.attack)+1;
+            }
+            getDefend(){
+                return Math.floor(Math.random()*this.defend)+1;
+            }
+        }
+      class Trainner {
+          constructor(name,pokemon){
+              this.name = name;
+              this.pokemon = null;
+          }
+          setPokemon(pokemon) {
+               this.pokemon = pokemon;   
+          }            
+          
+      }
+    
+
+      class Battle {
+         
+         getStart(trainner1,trainner2){
+              this.trainner1 = trainner1;
+              this.trainner2 = trainner2;
+             }
+          
+          getResult(){
+              
+              let dam1= 0;
+              let dam2 = 0;
+        
+            while(this.trainner1.pokemon.heal > 0 && this.trainner2.pokemon.heal > 0){
+                dam1 = this.trainner1.pokemon.getAttack() - this.trainner2.pokemon.getDefend();
+                dam2 = this.trainner2.pokemon.getAttack() - this.trainner1.pokemon.getDefend();
+                if(dam1 > 0){
+                    this.trainner2.pokemon.heal -= dam1;
+                    document.write(`${this.trainner1.pokemon.name} đã gây ${dam1} lượng sát thương vào ${this.trainner2.pokemon.name} <br> máu của  ${this.trainner2.pokemon.name} còn lại ${this.trainner2.pokemon.heal} <br>`);
+                }
+                if(dam2 > 0){
+                    this.trainner1.pokemon.heal -= dam2;
+                    document.write(`${this.trainner2.pokemon.name} đã gây ${dam2} lượng sát thương vào ${this.trainner1.pokemon.name} <br> máu của  ${this.trainner1.pokemon.name} còn lại ${this.trainner1.pokemon.heal} <br>`);
+                }
+            }
+                if(this.trainner1.pokemon.heal<=0){
+                   return document.write(`${this.trainner2.name} đã chiến thắng ${this.trainner1.name} đã thua`);
+                }
+                if(this.trainner2.pokemon.heal<=0){
+                    return document.write(`${this.trainner1.name} đã chiến thắng ${this.trainner2.name} đã thua`);
+                }
+
+                }
+            
+      
+    }
+
+      let pkm1 = new Pokemon("tho",1000,60,40);
+      let pkm2 = new Pokemon("rua",600,50,80);
+
+    let Tu = new Trainner('Tu');
+    Tu.setPokemon(pkm1);
+    let Quang = new Trainner('Quang');
+    Quang.setPokemon(pkm2);
+
+      let trongtai = new Battle();
+      trongtai.getStart(Tu, Quang);
+      trongtai.getResult();
+
+    </script>
+</body>
+</html>

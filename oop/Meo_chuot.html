@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Rat {
+           constructor(name,height,speed,life){
+               this.name = name;
+               this.height = height;
+               this.speed = speed;
+               this.life = true;
+           };
+           checkLife(rat){
+                if(this.height > 0){
+                    return true;
+                }else(this.height==0)
+                return false;
+            };
+           Bark(){
+               console.log("chit chit");
+           };
+           
+        }
+        class Cat{
+            constructor(name,height,speed,status){
+                this.name = name;
+                this.height = height;
+                this.speed = speed;
+                this.life = true;
+            };
+            
+            Bark(){
+                console.log("meo meo");
+            }
+          
+            checkSpeed(rat){
+                if(this.speed > rat.speed){
+                    console.log("tao sẽ bắt được mày");
+                }else{
+                    console.log("hôm nay bố mày mệt, tao tha cho mày chuột ạ");
+                }
+            };
+            Eat(rat){
+                if(rat.checkLife()){
+                    rat.height--;
+                    this.height++; 
+               }
+              
+            };
+
+
+        }
+        let rat = new Rat("Tom",2,1,40);
+        let cat = new Cat("Jerry",4,60);
+    
+    </script>
+</body>
+</html>

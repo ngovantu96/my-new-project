@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        alert("mời bạn nhập vào hệ số của phương trình");
+        let a = prompt("nhập vào hệ số a của phương");
+        let b = prompt("nhập vào hệ số b phương trình");
+        let c = prompt("nhập vào hệ số c của phương trình");
+        function equation(a, b, c){
+            if(a==0){
+                if(b==0){
+                    if(c!=0){
+                        document.write("phương trình vô nghiệm <br>");
+                    }
+                }else{
+                    if(c==0){
+                        let x = 0/b;
+                        document.write("<br> phương trình có nghiệm duy nhất :<br>" +x);
+                    }else{
+                        let x = -c/b;
+                        document.write("<br>phương trình có nghiệm là :<br"+x);
+                    }
+                }
+            }else{
+                if(b==0){
+                    if(c==0){
+                      let x = 0/a;
+                      document.write("<br>phương trình có nghiệm duy nhát :<br>"+x);
+                    }
+                    if(c<0){
+                        document.write("<br>phương trình vô nghiệm <br>");
+                    }
+                    if(c>0){
+                        let x = Math.sqrt(c/a);
+                        document.write("<br>phương trình có nghiệm là  :<br>"+x);
+                    }
+                }else{
+                        if(c==0){
+                            let x = -b/a;
+                            document.write("<br>phương trình có nghiệm là :<br>" +x);
+                        }else{
+                            let detal = b*b - 4*a*c;
+                            if(detal<0){
+                                document.write("<br>phương trình vô nghiệm");
+                            }
+                            if(detal == 0){
+                                let x1 = -b/(2*a);
+                                let x2 = -b/(2*a);
+                                document.write("<br>phương trình có nghiệm kép <br>"+x1+"-"x2);
+                            }
+                            if(detal>0){
+                                let x1 = (-b + Math.sqrt(detal))/(2*a);
+                                let x2 = (-b - Math.sqrt(detal))/(2*a);
+                                document.write("phương trình có 2 nghiệm phân biệt :" +x1 +"  : " +x2);
+                            }
+                        }
+                    }
+                }
+            }
+            equation(a,b,c);
+        
+        
+    </script>
+</body>
+</html>

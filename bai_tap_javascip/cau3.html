@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       class Rectangle{
+        constructor(x,y,height,width,coloer){
+                this.x = x,
+                this.y = y,
+               this.height = height,
+               this.width = width,
+                this.color = color
+            };      
+            render(canvas){  
+                let c = document.getElementById("myCanvas");             
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.fillStyle = this.color;
+                ctx.fillRect(this.x, this.y, this.height, this.width);
+                ctx.fill();
+        };
+        } 
+
+       let rectangle = new Rectangle(40,50,30,"#FF3300");
+       rectangle.render();
+   </script> 
+</body>
+</html>

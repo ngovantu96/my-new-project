@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let number =12345;
+        function Sum(){
+            let count=0;
+            let tamp =number;
+            while(tamp>0){
+                let y =  Math.floor(tamp%10);
+                count++;
+                
+            }
+            return count;
+           console.log(count);
+            while(number > 0){
+                let x = number%10;
+                sum += Math.pow(x,count);
+                number = Math.floor(number/10);
+            }
+            return sum;
+        }
+        Sum();
+    </script>
+</body>
+</html>
